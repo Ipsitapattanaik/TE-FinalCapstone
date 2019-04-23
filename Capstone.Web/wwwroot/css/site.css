@@ -1,0 +1,1101 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+/*Start of Shared Layout*/
+header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: #75cac3;
+    z-index: 7;
+}
+body {
+    background-color: #fbf7f5;
+}
+.layoutHeader {
+    color: #111;
+    font-family: 'Courier New', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.SiteTitle {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+}
+.MenuBar {
+    width: 100%;
+    height: 50px;
+    background-color: #2a6171;
+}
+
+.spacer {
+    padding-top:5px;
+    padding-left:60%;
+}
+
+/*Dropdown Menu Button*/
+#toggle {
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+}
+    #toggle div {
+        width: 100%;
+        height: 5px;
+        background: white;
+        margin: 4px auto;
+        transition: all .4s;
+        backface-visibility: hidden;
+    }
+    #toggle.on .one {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #toggle.on .two {
+        opacity: 0;
+    }
+    #toggle.on .three {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+/*Dropdown Menu*/
+#menu {
+    color: #DCAE1D;
+    border: 3px solid #2a6171;
+    width: 140px;
+    padding: 3px;
+    border-radius: 15px;
+    font-family: "Calibri" "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: lightcyan;
+}
+
+ul, li, li a {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+    li a {
+        padding: 5px;
+        color: #DCAE1D;
+        text-decoration: none;
+    }
+
+        li a:hover,
+        li a:focus {
+            background: lightseagreen;
+            color: white;
+            border-radius: 15px;
+        }
+/*End of Shared Layout*/
+
+/*Login Page Start*/
+#loginForm {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+}
+#loginHeader {
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.labelsLogin {
+    color: #DCAE1D;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.email{
+  
+    margin-right: 50px;
+
+}
+
+.inputs{
+    margin-left:0;
+}
+
+#submitLogin {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 10%;
+    background: #d7f7f5;
+    color: black;
+}
+/*Login Page End*/
+
+
+
+body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    height: auto;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-top: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Start of Survey page*/
+#surveyHeader {
+    text-align: center;
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1; 
+}
+#description {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+}
+/*surveyContainer question{
+    display: flex;
+    justify-content:flex-start;
+}*/
+.dropdown {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #60666d;
+    display: flex;
+    justify-content: flex-start;
+}
+.question {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #DCAE1D;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+.question2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+#submit {
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 10%;
+    background: #D7f7f5;
+    color: black;
+}
+/*End of Survey page*/
+
+/*Start of Franchise Search Page*/
+.SearchHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #75cac3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    height: auto;
+}
+#franchiseHeader {
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.SearchHead h2{
+    text-align:center;
+    margin:5px;
+}
+.searchBar{
+    margin-top: 15px;
+    width: 300px;
+    margin:auto;
+}
+.franchiseSubheader {
+    text-align: center;
+    font-family:Calibri;
+    font-size: 20px;
+    
+}
+input {
+    display: block;
+    margin: auto;
+}
+.FranSearch {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    height: auto;
+}
+.SearchTiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    min-width: 250px;
+    background-color: white;
+}
+a.fill-div {
+    text-decoration: none;
+}
+    .SearchTiles img {
+        display:flex;
+        justify-content:center;
+        margin:auto;
+        height: auto;
+        width: auto;
+        max-height:125px;
+        max-width:250px;
+        padding:5%;
+    }
+.TileBody h4 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DCAE1D;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+.TileBody p {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DCAE1D;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+.TileBody h5 {
+    text-align: center;
+}
+/*End of Franchise Search Page*/
+
+/*Start of Detail Page*/
+.FranchiseDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+#LargeImage{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.DetailTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    background-color: #fbf7f5;
+}
+.franchiseName {
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    border-bottom: #DCAE1D;
+    margin-bottom: 75px;
+}
+.franchiseHeading {
+    border-bottom: 1px solid #DCAE1D;
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.DetailTitle h3 {
+    text-align: center;
+}
+#DetailImg {
+    margin: auto;
+    max-height: 150px;
+    max-width: 300px;
+    min-height: 149px;
+    min-width: 299px;
+    height: auto;
+    width: auto;
+}
+.DetailDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    background-color: #fbf7f5;
+}
+.DetailDesc h3 {
+    text-align: center;
+    margin-left:10px;
+    margin-right:10px;
+    
+}
+
+.DetailInfo {
+    display: flex;
+    justify-content: space-around;
+}
+    .DetailInfo h2 {
+        text-align: center;
+    }
+    .DetailInfo h3{
+        text-align:center;
+    }
+/*End of Detail Page*/
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+    
+}
+#carousel-img{
+    border-radius: 10px;
+}
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/* Begin Index Page */
+.indexCardView {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+}
+.headerIndex {
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+.subheaderIndex {
+    color: #DCAE1D;
+    font-family: Calibri, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.indexCardBanner {
+    background-color: #2a6171;
+    border: 2px #DCAE1D;
+    border-radius: 8px;
+}
+
+.indexHotFranchises {
+    color: #DCAE1D;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: Calibri, sans-serif;
+}
+.siteDescription {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    color: #111;
+    font-family: Calibri, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+}
+.indexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+#indexImg {
+    animation-duration: 1s;
+    z-index: -1;
+    margin: 0 -1.5em;
+    border: 2px solid #2a6171;
+    border-radius: 10px;
+}
+
+/*Arrow Button Fun Starts Here*/
+.indexContainer div{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.arrow {
+    --active: #fff;
+    --border: rgba(255, 255, 255, .00);
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+    .left{
+        transform: scaleX(-1);
+    }
+.arrow i {
+    display: block;
+    position: absolute;
+    margin: -10px 0 0 -10px;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    z-index:3;
+}
+        .arrow i:before, 
+        .arrow i:after {
+            content: '';
+            width: 10px;
+            height: 3px;
+            border-radius: 1px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: var(--active);
+            margin: -1px 0 0 -5px;
+            display: block;
+            background-color:#2a6171;
+            transform-origin: 9px 50%;
+        }
+    .arrow i:before {
+        -webkit-transform: rotate(-40deg);
+        transform: rotate(-40deg);
+    }
+        .arrow i:after {
+            -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+        }
+.arrow:before,
+.arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 50%;
+    border: 1px solid #DCAE1D var(--border);
+    background-color: #75cac3;
+}
+.arrow svg {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: var(--active);
+    stroke-width: 4px;
+    stroke-dashoffset: 126;
+    stroke-dasharray: 126 126 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    color: #2a6171;
+}
+    .arrow.animate svg {
+        -webkit-animation: stroke 1s ease forwards .3s;
+        animation: stroke 1s ease forwards .3s;
+    }
+
+    .arrow.animate i {
+        -webkit-animation: arrow 1.6s ease forwards;
+        animation: arrow 1.6s ease forwards;
+    }
+
+        .arrow.animate i:before {
+            -webkit-animation: arrowUp 1.6s ease forwards;
+            animation: arrowUp 1.6s ease forwards;
+        }
+
+        .arrow.animate i:after {
+            -webkit-animation: arrowDown 1.6s ease forwards;
+            animation: arrowDown 1.6s ease forwards;
+        }
+
+@keyframes stroke {
+    52% {
+        transform: rotate(-180deg);
+        stroke-dashoffset: 0;
+    }
+
+    52.1% {
+        transform: rotate(-360deg);
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        transform: rotate(-180deg);
+        stroke-dashoffset: 126;
+    }
+}
+
+@keyframes arrow {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    23% {
+        transform: translateX(17px);
+        color: red;
+        opacity: 1;
+    }
+
+    24%, 80% {
+        transform: translateX(-22px);
+        opacity: 0;
+    }
+
+    81% {
+        opacity: 1;
+        transform: translateX(-22px);
+    }
+}
+
+@keyframes arrowUp {
+    0%, 100% {
+        transform: rotate(-40deg) scaleX(1);
+    }
+
+    20%, 80% {
+        transform: rotate(0deg) scaleX(.1);
+    }
+}
+
+@keyframes arrowDown {
+    0%, 100% {
+        transform: rotate(40deg) scaleX(1);
+    }
+
+    20%, 80% {
+        transform: rotate(0deg) scaleX(.1);
+    }
+}
+/*Arrow Button Fun Ends Here*/
+
+
+.indexContainerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.indexDescription {
+    text-align: center;
+}
+/* End Index Page */
+
+/* CreateProfile Page Start*/
+.createProfileContainer {
+    display: flex;
+    flex-direction: row;
+}
+.labelsProfile {
+    color: #DCAE1D;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.viewProfileButton{
+    background:#d7f7f5;
+    border-radius: 5px;
+    color:black;
+}
+/* CreateProfile Page End*/
+
+/*ViewProfile page*/
+.customParagraph {
+    margin-top: 30px;
+}
+.btn btn-default{
+    background-color:#d7f7f5;
+}
+.sendEmailButton {
+    margin-top: 15px;
+    display: flex;
+    background-color: #d7f7f5;
+    color: black;
+    justify-content: center;
+    border-radius: 5px;
+}
+/*ViewProfile page end*/
+
+/* Franchise Detail Screen Tables*/
+div.table-title {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding: 5px;
+    width: 100%;
+}
+
+.table-title h3 {
+    color: #d7f7f5;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Calibri, helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+/*** Table Styles **/
+.table-fill {
+    background: white;
+    border-radius: 3px;
+    border-collapse: collapse;
+    height: auto;
+    margin: auto;
+    margin-top: 0;
+    max-width: 350px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+th {
+    color: #D5DDE5;
+    background: #1b1e24;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size: 23px;
+    font-weight: 100;
+    padding: 24px;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+    th:first-child {
+        border-top-left-radius: 3px;
+    }
+
+    th:last-child {
+        border-top-right-radius: 3px;
+        border-right: none;
+    }
+
+tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color: #666B85;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+    tr:hover td {
+        background: #4E5066;
+        color: #FFFFFF;
+        border-top: 1px solid #22262e;
+    }
+
+    tr:first-child {
+        border-top: none;
+    }
+
+    tr:last-child {
+        border-bottom: none;
+    }
+
+    tr:nth-child(odd) td {
+        background: #EBEBEB;
+    }
+
+    tr:nth-child(odd):hover td {
+        background: #4E5066;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 3px;
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 3px;
+    }
+
+td {
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+    width: 50%;
+}
+
+    td:last-child {
+        border-right: 0px;
+    }
+
+th.text-left {
+    text-align: left;
+}
+
+th.text-center {
+    text-align: center;
+    background-color: #d7f7f5;
+    color: #DCAE1D;
+}
+
+th.text-right {
+    text-align: right;
+}
+
+td.text-left {
+    text-align: left;
+}
+
+td.text-center {
+    text-align: center;
+}
+
+td.text-right {
+    text-align: right;
+}
+
+.franchiseTableContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    border-top: 10px;
+    align-content: flex-start;
+    margin-bottom: 20px;
+}
+
+tbody {
+    width: 100%;
+    height: 100%;
+}
+
+thead {
+    width: 100%;
+}
+
+tr {
+    width: 100%;
+}
+/* End Franchise Detail Tables*/
+
+/*Start of About Us Page*/
+.AboutPage {
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    text-align:center;
+    font-family: Calibri;
+}
+p {
+    text-align: center;
+    font-family: Calibri;
+}
+#boring{
+    margin-top:-15em;
+}
+.AboutInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.AboutOut {
+    visibility: visible;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+.AboutIn {
+    visibility: visible;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    animation-direction: reverse;
+}
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.AboutHide{
+    visibility:hidden;
+}
+    .AboutProfile {
+        display: flex;
+        margin: 15px;
+        border: 4px solid #DCAE1D;
+        border-radius: 15px;
+    }
+
+    .AboutProfile img {
+        height: 200px;
+        width: 250px;
+        border-radius: 10px;
+    }
+
+.AboutInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+    /*End of About Us Page*/
+    /*Back to Survey View Start*/
+    .backToSurveyButton {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 80px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 10%;
+        background: #d7f7f5;
+        color: black;
+    }
+    /*Back to Survey View End*/
+    /*.incorrectLoginButton{
+    background: #d7f7f5;
+    border-radius: 5px;
+    color: black;
+}*/
+    /*Franchise Detail Page popup for info at bottom*/
+    /* Popup container */
+    .popup {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    /* The actual popup (appears on top) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: auto;
+        background-color: #D7F7F5;
+        color: #2A6171;
+        font-family: Calibri;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+    }
+    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+    }
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+        from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+
+
+table {
+    font-size: 12px;
+}
+
+#map {
+    width: 440px;
+    height: 100%;
+}
+
+#listing {
+    /*position: absolute;*/
+    width: 200px;
+    height: 470px;
+    overflow: auto;
+    left: 442px;
+    top: 0px;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+#findhotels {
+    /*position: absolute;*/
+    text-align: right;
+    width: 100px;
+    font-size: 14px;
+    padding: 4px;
+    z-index: 5;
+    background-color: #fff;
+}
+
+#locationField {
+    /*position: absolute;*/
+    width: 190px;
+    height: 25px;
+    left: 108px;
+    top: 0px;
+    z-index: 5;
+    background-color: #fff;
+}
+
+#controls {
+    /*position: absolute;*/
+    left: 300px;
+    width: 140px;
+    top: 0px;
+    z-index: 5;
+    background-color: #fff;
+}
+
+#autocomplete {
+    width: 100%;
+}
+
+#country {
+    width: 100%;
+}
+
+.placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+}
+
+.hotelIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    width: 240px;
+}
+
+#rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+}
+
+.iw_table_row {
+    height: 18px;
+}
+
+.iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+}
+
+.iw_table_icon {
+    text-align: right;
+}
+
+#clickme {
+    cursor: pointer;
+}

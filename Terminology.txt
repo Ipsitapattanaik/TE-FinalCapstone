@@ -1,0 +1,10 @@
+data definitions
+user profile - refers to username (email address),first name, last name, password,and phone number.
+survey answers - refers to the data a user has chosen when filling out the survey.
+
+views
+index - home page with company info, carousel, top franchises and drop down menu
+login - login
+register new user - creates a user profile
+franchise search - has search bar and filters all franchises by search criteria
+user results - displays list of franchises filtered by the users survey answers

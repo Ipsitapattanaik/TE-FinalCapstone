@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div class="AboutPage">
+
+    <div id="clickme" onclick="Morph()">
+        <h2>About Us</h2>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/deepfriedSean.png" />
+        <div class="AboutInfo">
+            <h2>Sean Rogers</h2>
+            <h5>Tech Elevator's seed of power, the student that is the inheritor of the horrible, hoary hammer of the gods, Sean, the programming wizard who was destined to vanquish all evil, and, if he so wish, bring it back again!</h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/Sean.jpg" />
+        <div class="AboutInfo">
+            <h2>Sean Rogers</h2>
+            <h5>A programmer and writer, Sean joined the Franchise Finder team as a front end developer and content manager.</h5>
+        </div>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/warrenfried.png" />
+        <div class="AboutInfo">
+            <h2>Warren Stowe</h2>
+            <h5>Master ping pong player: he isn't redefining the game, he is the game. Excellent programmer and CSS arsonist. Likes: deep-fried images of friends and family, bubble baths, and shirts with one word on them.  Dislikes: electricity.</h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/warren.png" />
+        <div class="AboutInfo">
+            <h2>Warren Stowe</h2>
+            <h5>A programmer and collegiate athlete, Warren manages the backend software for Franchise Finder.</h5>
+        </div>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/deepfriedJarrod.png" />
+        <div class="AboutInfo">
+            <h2>Jarrod DeArmitt</h2>
+            <h5>
+                Known to his friends as Jarrod DeArmitt and to his enemies as El Capitan, Jarrod spent years squatting in a cabin on the muddy banks of the
+                Monongahela River coding by candlelight and cackling to himself. After mastering the art of O(N2) for-loops, he plans on using his hard-earned
+                powers to sell jock straps, putters, and other sporting equipment deep in the forests of Coraopolis.
+            </h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/Jarrod.jpg" />
+        <div class="AboutInfo">
+            <h2>Jarrod DeArmitt</h2>
+            <h5>
+                A programmer and musician, Jarrod developed and manages the database of Franchise Finder.
+            </h5>
+        </div>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/deepfriedMike.jpg" />
+        <div class="AboutInfo">
+            <h2>Michael Stokes</h2>
+            <h5>Ever since his inception, Superman has been depicted as a hero that originated on the planet Krypton and named Kal-El. As a baby, he was sent to Earth in a small spaceship by his biological family, Jor-El and Lara, moments before Krypton was destroyed in a natural cataclysm. His ship landed in the American countryside; he was found and adopted by farmers Jonathan and Martha Kent near the town of Smallville, who named him Michael Stokes.</h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/Michael.jpg" />
+        <div class="AboutInfo">
+            <h2>Michael Stokes</h2>
+            <h5>A programmer and motorcycle enthusiast, Michael is a full stack developer at Franchise Finder</h5>
+        </div>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/deepfried_Caitie.png" />
+        <div class="AboutInfo">
+            <h2>Caitie Zajko</h2>
+            <h5>Pathway Director / Mythical Being at Tech Elevator. "Danes, Finns, Swedes, Estonians, Latvians, Lithuanians, and Irish people are amongst some of the groups who believed that a Pathway Director marked the location of a treasure deep in the ground or in job boards, which could be taken only after week 10, when match-making was underway. Sometimes magical tricks, and even dead man's hand, were required as well, to receive a job offer." </h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/Caitie.jpg" />
+        <div class="AboutInfo">
+            <h2>Caitie Zajko</h2>
+            <h5>With years of experience in recruiting and human resources, Caitie recently joined Franchise finder as a product manager.</h5>
+        </div>
+    </div>
+
+    <div class="AboutProfile AboutHide" id="fun">
+        <img src="~/images/deepfried_Beth.png" />
+        <div class="AboutInfo">
+            <h2>Beth Campbell</h2>
+            <h5>Beth Campbell: a person who is described as an enigma and a bit of a mystery. You never know what she is really thinking, or what her motives for doing something are. The scrum master is not easily understood especially because she has a confusing mixture of qualities that seem to be in opposition to one another—for example, the attention-seeking but reclusive musician, or the brilliant lawyer who gets lost on the drive home from the grocery store. Beth is neither Tom nor Tom.</h5>
+        </div>
+    </div>
+    <div class="AboutProfile" id="boring">
+        <img src="~/images/Beth.jpg" />
+        <div class="AboutInfo">
+            <h2>Beth Campbell</h2>
+            <h5>A senior programmer with years of experience, Beth recently joined the Franchise Finder crew as a Scrum Master.</h5>
+        </div>
+    </div>
+</div>
+
+<script>
+    let OnOrOff = 0;
+    function Morph() {
+        let fun = document.querySelectorAll("#fun");
+        let boring = document.querySelectorAll("#boring");
+        let amount = boring.length;
+        for (let i = 0; i < amount; i++) {
+            if (OnOrOff % 2 == 0) {
+                fun[i].classList.toggle('AboutIn');
+                fun[i].classList.toggle('AboutHide');
+                setTimeout(() => { fun[i].classList.toggle('AboutIn'); }, 5000);
+                boring[i].classList.toggle('AboutOut');
+                setTimeout(() => { boring[i].classList.toggle('AboutHide'); }, 5000);
+                setTimeout(() => { boring[i].classList.toggle('AboutOut'); }, 5000);
+            } else {
+                boring[i].classList.toggle('AboutIn');
+                boring[i].classList.toggle('AboutHide');
+                setTimeout(() => { boring[i].classList.toggle('AboutIn'); }, 5000);
+                fun[i].classList.toggle('AboutOut');
+                setTimeout(() => { fun[i].classList.toggle('AboutHide'); }, 5000);
+                setTimeout(() => { fun[i].classList.toggle('AboutOut'); }, 5000);
+            }
+        }
+        OnOrOff++;   
+    }
+</script>

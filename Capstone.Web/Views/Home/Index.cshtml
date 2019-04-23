@@ -1,0 +1,120 @@
+﻿@model List<Franchise>
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let currentImage = 0;
+        let imgDiv = document.getElementById("indexImg");
+        let carouselImg = document.querySelector('#carousel-img');
+        let nextImg = document.querySelector('#next-image');
+        let previousImg = document.querySelector('#previous-image');
+
+        nextImg.addEventListener('click', function () {
+            nextImage(1);
+            moveRight();
+        });
+
+        previousImg.addEventListener('click', function () {
+            nextImage(-1);
+            moveLeft();
+        });
+
+        carouselImg.width = 300;  
+        function nextImage(incrementer) {
+            console.log(incrementer);
+            currentImage += incrementer;
+            // Account for looping
+            if (currentImage == 3) currentImage = 0;
+            if (currentImage == -1) currentImage = 2;
+
+            switch (currentImage) {
+                case 0:
+                    carouselImg.src = "../images/success.jpg";
+                    break;
+                case 1:
+                    carouselImg.src = "../images/jumping.jpg";
+                    break;
+                case 2:
+                    carouselImg.src = "../images/partnership.jpg";
+                    break;
+            }
+        }
+        function moveRight() {
+            imgDiv.classList.toggle('w3-animate-right');
+            setTimeout(() => { imgDiv.classList.toggle('w3-animate-right'); }, 1000);
+        }
+        function moveLeft() {
+            imgDiv.classList.toggle('w3-animate-left');
+            setTimeout(() => { imgDiv.classList.toggle('w3-animate-left'); }, 1000);
+        }
+    });
+
+    
+
+    
+</script>
+
+<div>
+    <div class="indexContainerColumn">
+        <div class="indexDescription">
+            <h3 class="headerIndex">Welcome to Franchise Finder!</h3>
+            <h2 class="subheaderIndex">Have you ever wanted to own your own franchise?</h2>
+            <p class="siteDescription">
+                Franchise Finder is the starting point for any budding restaurateur. Search through our database
+                of dozens of franchises or, to find your perfect match, log in to take the <a asp-controller="Home" asp-action="Survey">Franchise Finder Survey</a>.
+                Your future is waiting just around the corner.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="indexContainer">
+        <div>
+            <a href="" class="arrow left" id="previous-image">
+                <i></i>
+                <svg>
+                    <use xlink:href="#circle" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="" id="indexImg">
+            <img id="carousel-img" class="displayed-img" src="~/images/success.jpg">
+            <div class="overlay"></div>
+        </div>
+        <div>
+            <a href="" class="arrow" id="next-image">
+                <i></i>
+                <svg>
+                    <use xlink:href="#circle" />
+                </svg>
+            </a>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+                <circle r="20" cy="22" cx="22" id="test" />
+            </symbol>
+        </svg>
+    </div>
+    <p style="font-family:Calibri; font-weight:bold;margin-top:5px;">Don't be afraid to give up the good to go for the great.</p>
+
+    <p class="indexHotFranchises">Hot Franchises</p>
+    <div class="indexCardView indexCardBanner" id="FranName">
+        @foreach (Franchise franchise in Model)
+        {
+            <div class="SearchTiles" id="@franchise.FranchiseName" style="">
+                <a asp-controller="Home" asp-action="Franchise" asp-route-id="@franchise.FranchiseId" class="fill-div">
+                    <img src="@franchise.LogoURL" />
+                    <div class="TileBody">
+                        <h4>
+                            @franchise.FranchiseName
+                        </h4>
+                        <p>@franchise.Heading</p>
+                        <h5>@franchise.Category</h5>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model UserLogin
+@{
+    ViewBag.Title = "LogIn";
+}
+
+<h2 id="loginHeader">Enter Your Login and Password</h2>
+
+<form asp-controller="Profile" asp-action="Login" method="post">
+    <div id="loginForm">
+        <div class="inputLogin">
+            <div class="email">
+                <label class="labelsLogin" asp-for="UserEmail"></label>
+                <input class="inputs" type="email" asp-for="UserEmail" placeholder="Enter Your Email" autofocus="autofocus"/>
+                <span asp-validation-for="UserEmail"></span>
+            </div>
+            <div class="password">
+                <label class="labelsLogin" asp-for="UserPassword"></label>
+                <input class="inputs" type="password" asp-for="UserPassword" placeholder="Password" />
+                <span asp-validation-for="UserPassword"></span>
+            </div>
+            <input id="submitLogin" type="submit" value="Submit" />
+        </div>
+
+    </div>
+
+
+</form>
+<p style="margin-top:5px" >Don't have a login? <a asp-controller="Profile" asp-action="CreateProfile"> Click here.</a> </p>
+
+

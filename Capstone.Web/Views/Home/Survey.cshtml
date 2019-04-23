@@ -1,0 +1,92 @@
+﻿@model Survey
+@{
+    ViewBag.Title = "Survey";
+}
+
+
+    <h1 id="surveyHeader">Take the Franchise Finder Survey</h1>
+
+    <p id="description">You know that you're ready to own your own restaurant, but which one is right for you? The Franchise Matcher Survey is here to help. Answer the questions to begin your new career as an entrepreneur!</p>
+
+<hr />
+
+    <div class="surveyContainer">
+        <p class="question"><b>Question 1)</b> <div class="question2">Why do you want to own a business?</div></p>
+        
+        <form asp-controller="Home" asp-action="Survey" method="post">
+            <div class="dropdown">
+
+                <select asp-for="Business1" asp-items="Model.Business"></select>
+            </div>
+
+            <p class="question"><b>Question 2) </b> <div class="question2">Select a state that you want to operate in:</div></p>
+            <div class="dropdown">
+
+                <select asp-for="State2" asp-items="Model.State"></select>
+                </div>
+
+                <p class="question"><b>Question 3)</b> <div class="question2">In which industry do you have experience?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="Experience3" asp-items="Model.Experience"></select>
+
+                </div>
+                <p class="question"><b>Question 4) </b><div class="question2">What is your Net Worth?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="NetWorth4" asp-items="Model.NetWorth"></select>
+
+                </div>
+                <p class="question" type="hidden"><b>Question 5) </b><div class="question2">What size of staff do you want?</div></p>
+                <div class="dropdown" type="hidden">
+
+                    <select asp-for="Staff5" asp-items="Model.Staff"></select>
+
+                </div>
+                <p class="question"><b>Question 6) </b><div class="question2">Have you ever owned a business?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="HaveOwnedBusiness6" asp-items="Model.HaveOwnedBusiness"></select>
+                </div>
+                <p class="question"><b>Question 7) </b><div class="question2">What is your work style?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="WorkStyle7" asp-items="Model.WorkStyle"></select>
+                </div>
+                <p class="question"><b>Question 8) </b><div class="question2">What industry are you interested in?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="Industry8" asp-items="Model.Industry"></select>
+                </div>
+                <p class="question"><b>Question 9) </b><div class="question2">How do you deal with challenges?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="Challenges9" asp-items="Model.Challenges"></select>
+                </div>
+                <p class="question"><b>Question 10) </b><div class="question2">What is your timeframe for purchasing a franchise?</div></p>
+                <div class="dropdown">
+
+                    <select asp-for="Timeframe10" asp-items="Model.TimeFrame"></select>
+                </div>
+                <input class="inputs" id="submit" type="submit" />
+
+
+        </form>
+
+
+        </div>
+    
+    
+  
+
+  
+ 
+  
+ 
+  
+ 
+
+
+
+    
+ 

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "IncorrectLogin";
+}
+
+<h2>Incorrect Login</h2>
+
+<p>The email or password entered does not match any in our database</p>
+
+<form asp-controller="Profile" asp-action="Login" method="get">
+<input class="incorrectLoginButton"type="submit" value="Return To The Login Screen"  style="text-align: center"/>
+</form>

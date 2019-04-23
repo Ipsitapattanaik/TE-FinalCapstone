@@ -1,0 +1,19 @@
+Questions
+
+-are there any franchise apis?
+-google maps api for franchise locations
+    => maybe this does something to find businesses in an area
+-survey form to narrow results
+    => questions about location, industry, possibly size of investment
+-if we can't get access to a real franchise api, we need to fill a database with mock businesses
+
+
+Requirements
+-create user login page
+-create page to create a user profile
+    => lecture code about storing passwords
+
+-how is survey data going to be stored
+-how are franchise options stored
+
+    

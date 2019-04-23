@@ -1,0 +1,63 @@
+﻿@model UserProfile
+@{
+    ViewBag.Title = "CreateProfile";
+}
+
+<h2>Create A Profile</h2>
+
+<form asp-controller="Profile" asp-action="CreateProfile" method="post">
+    <div id="loginForm">
+        <div class="inputLogin">
+            <div class="email">
+                <label class="labelsProfile" asp-for="UserEmail">Email</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" type="email" asp-for="UserEmail" placeholder="Email" />
+                    <span asp-validation-for="UserEmail"></span>
+                </div>
+            </div>
+            <div class="email">
+                <label class="labelsProfile" asp-for="ConfirmEmail">Confirm Email</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" type="email" asp-for="ConfirmEmail" placeholder="Confirm Email" />
+                    <span asp-validation-for="ConfirmEmail"></span>
+                </div>
+            </div>
+            <div class="password">
+                <label class="labelsProfile" asp-for="UserPassword">Password</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" type="password" asp-for="UserPassword" placeholder="Password" />
+                    <span asp-validation-for="UserPassword"></span>
+                </div>
+            </div>
+            <div class="password">
+                <label class="labelsProfile" asp-for="ConfirmPassword">Confirm Password</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" />
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+            </div>
+            <label class="labelsProfile" asp-for="FirstName">First Name</label>
+            <div class="createProfileContainer">
+                <input class="inputs" type="text" asp-for="FirstName" placeholder="First Name" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div>
+                <label class="labelsProfile" asp-for="LastName">Last Name</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" type="text" asp-for="LastName" placeholder="Last Name" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+            <div>
+                <label class="labelsProfile" asp-for="PhoneNumber">Phone Number</label>
+                <div class="createProfileContainer">
+                    <input class="inputs" id="PhoneNumber" type="tel" asp-for="PhoneNumber" placeholder="Phone Number" />
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <input style="background-color: #d7f7f5" id="submitLogin" type="submit" value="Submit" />
+
+</form>

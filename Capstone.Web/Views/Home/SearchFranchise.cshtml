@@ -1,0 +1,29 @@
+﻿@model List<Franchise>
+@{
+    ViewBag.Title = "SearchFranchise";
+}
+<div class="SearchHead">
+    <h2 id="franchiseHeader">Search Franchises</h2>
+    <p class="franchiseSubheader">Find the most popular franchises!</p>
+    @*<div class="SearchBar">*@
+        <input class="searchBar" type="text" id="Input" onkeyup="myFunction()" placeholder="Search..." />
+    @*</div>*@
+</div>
+
+<div class="FranSearch"  id="FranName">
+    @foreach (Franchise franchise in Model)
+    {
+    <div class="SearchTiles" id="@franchise.FranchiseName" style="">
+        <a asp-controller="Home" asp-action="Franchise" asp-route-id="@franchise.FranchiseId" class="fill-div">
+            <img src="@franchise.LogoURL" />
+            <div class="TileBody">
+                <h4>
+                    @franchise.FranchiseName
+                </h4>
+                <p>@franchise.Heading</p>
+                <h5>@franchise.Category</h5>
+            </div>
+        </a>
+    </div>
+    }
+</div>

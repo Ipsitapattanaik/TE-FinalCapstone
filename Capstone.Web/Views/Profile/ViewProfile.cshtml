@@ -1,0 +1,42 @@
+﻿@model ProfileResults
+@{
+    ViewBag.Title = "ViewProfile";
+}
+
+<h2 style="text-align:center">Here is your franchise profile based on your survey results</h2>
+<div id="customParagraph">
+    <p class="customParagraph">
+        Here's what we can tell from your survey: <span>@Model.surveyAnswer.business </span><span>@Model.surveyAnswer.workStyle </span>
+        <span>@Model.surveyAnswer.experience </span><span>@Model.surveyAnswer.challenge </span>
+        <span>@Model.surveyAnswer.timeFrame </span> Check out the businesses below and feel free to <a asp-controller="Home" asp-action="Contact">contact us</a> about your results.
+    </p>
+
+</div>
+
+<div class="FranSearch" id="FranName">
+    @foreach (Franchise franchise in Model.franchiseList)
+    {
+        <div class="SearchTiles" id="@franchise.FranchiseName" style="">
+            <a asp-controller="Home" asp-action="Franchise" asp-route-id="@franchise.FranchiseId" class="fill-div">
+                <img src="@franchise.LogoURL" />
+                <div class="TileBody">
+                    <h5>
+                        @franchise.FranchiseName
+                    </h5>
+                    <p>@franchise.Heading</p>
+                </div>
+            </a>
+        </div>
+    }
+</div>
+<div style="display: flex; color:#d7f7f5; justify-content:center">
+    <a asp-controller="Home" asp-action="Survey">
+        <input type="button" value="Retake Survey" class="viewProfileButton" />
+    </a>
+</div>
+
+<div style="display: flex; justify-content:center">
+    <a asp-controller="Profile" asp-action="EmailConfirmation">
+        <input type="button" value="Email Results" class="sendEmailButton" />
+    </a>
+</div>
